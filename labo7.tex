@@ -1,0 +1,197 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{multicol}
+
+% Theme choice
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\title{Mathematical Concepts Presentation}
+\author{NONOGA Djintoba}
+\institute{RUDN University}
+\date{\today}
+
+\begin{document}
+
+% Title page
+\begin{frame}
+    \titlepage
+    \centering
+    \includegraphics[width=0.3\textwidth]{logorudn.png}
+\end{frame}
+
+% Table of Contents
+\begin{frame}{Table of Contents}
+    \tableofcontents
+\end{frame}
+
+% Introduction with objectives
+\section{Introduction \& Objectives}
+\begin{frame}{Introduction \& Objectives}
+    \begin{columns}
+        \begin{column}{0.7\textwidth}
+            \textbf{Presentation Goals:}
+            \begin{itemize}
+                \item Introduce fundamental set theory concepts
+                \item Explain common mathematical sets
+                \item Demonstrate calculus product rule
+                \item Show practical applications
+            \end{itemize}
+            
+            \vspace{0.5cm}
+            \textbf{Key Topics:}
+            \begin{itemize}
+                \item Sets and elements
+                \item Special number sets ($\mathbb{N}$, $\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$)
+                \item Derivative product rule
+            \end{itemize}
+        \end{column}
+        
+        \begin{column}{0.3\textwidth}
+            \centering
+            \includegraphics[width=\textwidth]{logorudn.png}
+            \\
+            \vspace{0.5cm}
+            \footnotesize
+            RUDN University\\
+            Moscow, Russia
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% Combined sets and operations
+\section{Set Theory Fundamentals}
+\begin{frame}{Set Theory Fundamentals}
+    \begin{columns}
+        \begin{column}{0.48\textwidth}
+            \textbf{Basic Definitions:}
+            \begin{itemize}
+                \item Set: Collection of objects
+                \item Example: $Z = \{\text{cow}, \text{pig}, \text{elephant}\}$
+                \item Element: $\text{cow} \in Z$
+                \item Common sets:
+                \begin{itemize}
+                    \item $\mathbb{N} = \{1,2,3,\ldots\}$ (Natural)
+                    \item $\mathbb{Z} = \{\ldots,-2,-1,0,1,2,\ldots\}$ (Integer)
+                    \item $\mathbb{Q} = \{p/q : p,q\in\mathbb{Z}, q\neq 0\}$ (Rational)
+                    \item $\mathbb{R}$ = Decimal numbers (Real)
+                \end{itemize}
+            \end{itemize}
+        \end{column}
+        
+        \begin{column}{0.48\textwidth}
+            \textbf{Set Operations:}
+            \begin{itemize}
+                \item Union: $A \cup B = \{x : x \in A \text{ or } x \in B\}$
+                \item Intersection: $A \cap B = \{x : x \in A \text{ and } x \in B\}$
+                \item Difference: $A \setminus B = \{x : x \in A \text{ and } x \notin B\}$
+            \end{itemize}
+            
+            \vspace{0.5cm}
+            \textbf{Example:}
+            If $A = \{1,2,3\}$ and $B = \{2,3,4\}$:
+            \begin{itemize}
+                \item $A \cup B = \{1,2,3,4\}$
+                \item $A \cap B = \{2,3\}$
+                \item $A \setminus B = \{1\}$
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% Calculus with proof combined
+\section{Calculus: Product Rule}
+\begin{frame}{Calculus: Product Rule}
+    \begin{columns}
+        \begin{column}{0.65\textwidth}
+            \textbf{Product Rule Formula:}
+            \[
+            \frac{d}{dx}[f(x)g(x)] = f'(x)g(x) + f(x)g'(x)
+            \]
+            
+            \textbf{Example:}
+            For $f(x) = x^2 \cdot \sin(x)$:
+            \begin{align*}
+            f'(x) &= \frac{d}{dx}(x^2) \cdot \sin(x) + x^2 \cdot \frac{d}{dx}(\sin(x)) \\
+            &= 2x \cdot \sin(x) + x^2 \cdot \cos(x)
+            \end{align*}
+            
+            \textbf{Proof Outline:}
+            \begin{itemize}
+                \item Start with definition: $f'(x) = \lim_{h\to 0} \frac{f(x+h)-f(x)}{h}$
+                \item For $f(x) = g(x)h(x)$:
+                \item Add and subtract $g(x+h)h(x)$
+                \item Result: $f'(x) = g(x)h'(x) + g'(x)h(x)$
+            \end{itemize}
+        \end{column}
+        
+        \begin{column}{0.35\textwidth}
+            \centering
+            \includegraphics[width=0.8\textwidth]{example-image}
+            \\
+            \footnotesize
+            Visual: Product rule
+            
+            \vspace{1cm}
+            \textbf{Key Insight:}
+            \small
+            The derivative of a product is NOT the product of derivatives!
+            \[
+            (fg)' \neq f'g'
+            \]
+        \end{column}
+    \end{columns}
+\end{frame}
+
+% Applications and conclusion combined
+\section{Applications \& Conclusion}
+\begin{frame}{Applications \& Conclusion}
+    \begin{columns}
+        \begin{column}{0.7\textwidth}
+            \textbf{Applications:}
+            \begin{itemize}
+                \item \textbf{Physics:} Motion equations, force calculations
+                \item \textbf{Engineering:} Signal processing, control systems
+                \item \textbf{Computer Science:} Algorithms, machine learning
+                \item \textbf{Economics:} Optimization, modeling
+            \end{itemize}
+            
+            \vspace{0.5cm}
+            \textbf{Key Takeaways:}
+            \begin{enumerate}
+                \item Sets provide foundation for mathematical structures
+                \item Product rule is essential for calculus operations
+                \item These concepts enable real-world problem solving
+            \end{enumerate}
+        \end{column}
+        
+        \begin{column}{0.3\textwidth}
+            \centering
+            \includegraphics[width=0.9\textwidth]{logorudn.png}
+            
+            \vspace{0.5cm}
+            \textbf{Thank You!}
+            
+            \vspace{0.2cm}
+            \small
+            Questions?
+            
+            \vspace{0.5cm}
+            \footnotesize
+            NONOGA Djintoba\\
+            RUDN University
+        \end{column}
+    \end{columns}
+    
+    \vspace{0.5cm}
+    \centering
+    \rule{0.8\textwidth}{0.5pt}
+    
+    \small
+    \textbf{References:}
+    Calculus by James Stewart, Discrete Mathematics by Rosen
+\end{frame}
+
+\end{document}
